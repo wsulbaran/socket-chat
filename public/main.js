@@ -16,6 +16,8 @@ formModal.addEventListener('submit', function(e) {
   if(nickname.value){
     socket.emit('add user', nickname.value);
     document.getElementById('closeModal').click();
+  } else {
+    validateNickname(nickname.value);
   }
 })
 
@@ -45,3 +47,13 @@ socket.on('user joined', function(users) {
   toastText.innerHTML = users.username;
 
 })
+
+
+function validateNickname(nickname) {
+  if (!nickname || 0 === nickname){
+    $(document).ready(function(){
+      $('.toast').toast({delay: 3000});
+      $('.toast').toast('show');
+    })
+  }
+}

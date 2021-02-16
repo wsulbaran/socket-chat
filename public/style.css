@@ -9,3 +9,18 @@ body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSyst
 #messages > li { padding: 0.5rem 1rem; }
 #messages > li:nth-child(odd) { background: #efefef; }
 #buttonModal {display: none;}
+
+#container-toast {position: relative; min-height: 100px;}
+.toast {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.colordiv  {
+  position: relative;
+  z-index: 9;
+  background: red;
+  width:15px;
+  height:15px;
+}
+
